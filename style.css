@@ -46,7 +46,7 @@ body{
 }
 
 #main-heading{
-    font-size: 56px;
+    font-size: 42px;
     margin-top: 10px;
     padding: 0px 25px;
     text-shadow:  -.1px .75px rgb(255, 255, 255);
@@ -133,13 +133,13 @@ label{    text-shadow: 1px 1px rgba(0,0,0,0.3);
 
 
 
-#city{font-size: 42px; margin: 6px;}
+#city{font-size: 36px; margin: 6px;}
 
 #country{font-size: 12px;margin-right: 16px;}
 
-#date{font-size: 12px; margin-top: 25px;margin-right: 10px; text-shadow: 1px 1px rgba(0,0,0,0.3);}
+#date{font-size: 8px; margin-top: 25px;margin-right: 10px; text-shadow: 1px 1px rgba(0,0,0,0.3);}
 
-#temp{font-size: 42px;}
+#temp{font-size: 36px;}
 
 .city-info{display: inline-flex;
     justify-content: center;
@@ -183,7 +183,7 @@ text-shadow: 1px 1px rgba(0,0,0,0.3);}
     }
 
     .air-info{display: flexbox;
-    font-size: 18px;
+    font-size: 16px;
 justify-content: center;
 align-content: center;
 align-self: center;
