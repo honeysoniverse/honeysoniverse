@@ -1,0 +1,55 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Sanskari Babuji</title>
+</head>
+<body>
+<div class="head">
+<h1>Sanskari Babuji Magic</h1>
+<p>Write a message filled with hindi slangs and babuji will make your message a little sanskari...</p>
+</div>
+<div class="pics">
+  <img src="img/sanskar.png" id="sanskar" alt="">
+  <img src="img/slang.png" alt="" id="slang">
+</div>
+<div class="container">
+<textarea rows="10" cols="50" id="myTextarea" placeholder="Apne dushman ke liye kuch baatein..."></textarea><br><br>
+<h5>Sanskari Filtered Message</h5>
+<div class="result" id="result">
+</div>
+</div>
+<script>
+  let sanskar = document.getElementById('sanskar');
+  let slang = document.getElementById('slang');
+  const slang_pattern = /madarchod|kutt[ae]|kamin[ae]y?|kutton|b[ae]?h?[ae]?nchod|may[ie]e?yaa?chod|l[a][u]?[o]?[v]?[dr][ea]|chutiy[ae]|bhosdi\s?(ke|ka)?|harami|betichod|pillay|b[ae]?h?[ae]?\s?ke\s?lo?a?u?[dv]e/;
+
+  let textArea = document.getElementById("myTextarea");
+  let text = document.getElementById("myTextarea").value;
+  textArea.addEventListener('keyup', function(e){
+    myFunction();
+    if (e.target.value.match(slang_pattern)){sanskar.style.visibility="hidden";slang.style.visibility="visible";return;}
+    else if(e.target.value.match(/[A-za-z0–9_]/ig)){slang.style.visibility="hidden"; sanskar.style.visibility="visible";return;}
+  })
+
+
+
+
+function myFunction() {
+  let text = document.getElementById("myTextarea");
+  let x = document.getElementById("myTextarea").value;
+  text.addEventListener('onkeyup', function(){console.log('hi')})
+let y = x.replace(/madarchod/ig, "maa ka pyaara").replace(/kutt[ae]/ig, "raja").replace(/kamin[ae]y?/ig, "dost")
+.replace(/kutton/ig, "doston").replace(/b[ae]?h?[ae]?nchod/ig, "bhai").replace(/may[ie]e?yaa?chod/ig, "mayi ka pyaara")
+.replace(/l[a][u]?[o]?[v]?[dr][ea]/ig, "huzoor").replace(/chutiy[ae]/ig, "ustad")
+.replace(/bhosdi\s?(ke|ka)?/ig, "bhole").replace(/harami/ig,"harilal");
+document.getElementById('result').innerHTML = y;
+}
+</script>
+</body>
+</html>
